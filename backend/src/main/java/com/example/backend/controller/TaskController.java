@@ -2,6 +2,7 @@ package com.example.backend.controller;
 
 import com.example.backend.domain.Task;
 import com.example.backend.service.TaskService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -14,19 +15,19 @@ public class TaskController {
         this.taskService = taskService;
     }
 
-    @GetMapping
-    public List<Task> getTasks() {
-        return taskService.getAllTasks();
+    @GetMapping("")
+    public ResponseEntity<List<Task>> getTasks() {
+        return ResponseEntity.ok(taskService.getAllTasks());
     }
 
-    @PostMapping
-    public Task addTask(@RequestBody Task task) {
-        return taskService.createTask(task);
+    @PostMapping("")
+    public ResponseEntity<Task> addTask(@RequestBody Task task) {
+        return ResponseEntity.ok(taskService.createTask(task));
     }
 
     @GetMapping("/{id}")
-    public Task getTask(@PathVariable Long id) {
-        return taskService.getTask(id);
+    public ResponseEntity<Task> getTask(@PathVariable Long id) {
+        return ResponseEntity.ok(taskService.getTask(id));
     }
 
     @DeleteMapping("/{id}")
