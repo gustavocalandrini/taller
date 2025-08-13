@@ -1,0 +1,149 @@
+type: collection.insomnia.rest/5.0
+name: My first collection
+meta:
+  id: wrk_557b7f74880a4a10b46ffe60134daf3d
+  created: 1755107155668
+  modified: 1755107155668
+  description: ""
+collection:
+  - url: http://localhost:8080/api/tasks?page=1&pageSize=10
+    name: Get All Tasks
+    meta:
+      id: req_0f45f1b9da3a4ec4ae6583d10b9c951a
+      created: 1755107155738
+      modified: 1755117642230
+      isPrivate: false
+      description: ""
+      sortKey: -1755107155738
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/tasks
+    name: Create Task
+    meta:
+      id: req_07f2a0568fb840a5a0afbff5c223cf6e
+      created: 1755109390575
+      modified: 1755115621736
+      isPrivate: false
+      description: ""
+      sortKey: -1754077313226
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title":"Task"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/tasks/2
+    name: Delete Task
+    meta:
+      id: req_711f1c57ab484c7392ec38f7c50b64d1
+      created: 1755109592426
+      modified: 1755111161072
+      isPrivate: false
+      description: ""
+      sortKey: -1753562391970
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/tasks/1
+    name: Get Task
+    meta:
+      id: req_d9bd050fa2a5471c90ec0c5a89c4c90a
+      created: 1755109633759
+      modified: 1755117357740
+      isPrivate: false
+      description: ""
+      sortKey: -1754592234482
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/tasks/6
+    name: Update Task
+    meta:
+      id: req_7faf9de251444f048a2b280144cdff42
+      created: 1755117377054
+      modified: 1755117650908
+      isPrivate: false
+      description: ""
+      sortKey: -1753819852598
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        		"id": "6",
+        		"title": "Task Update",
+        		"status": "COMPLETED"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_a987c2829024155794e90e0d6956ba87d30d4ec6
+    created: 1755107155674
+    modified: 1755107155674
+environments:
+  name: Base Environment
+  meta:
+    id: env_a987c2829024155794e90e0d6956ba87d30d4ec6
+    created: 1755107155670
+    modified: 1755107155670
+    isPrivate: false

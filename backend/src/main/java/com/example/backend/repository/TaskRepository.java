@@ -34,4 +34,16 @@ public class TaskRepository {
                 .findFirst()
                 .orElse(null);
     }
+
+    public Task update(Long id, Task updatedUser) {
+        for (int i = 0; i < tasks.size(); i++) {
+            Task current = tasks.get(i);
+            if (current.getId().equals(id)) {
+                updatedUser.setId(id);
+                tasks.set(i, updatedUser);
+                return updatedUser;
+            }
+        }
+        return null;
+    }
 }
